@@ -14,3 +14,8 @@ Verify Current URL
     [Arguments]    ${url}
     ${current_url}    Get Location
     Should Be Equal    ${current_url}    ${url}    Url is not valid
+
+Verify URL Not Equal
+    [Arguments]    ${url}
+    ${current_url}    Get Location
+    Should Not Be Equal    ${current_url} ${url}    Url are equal
